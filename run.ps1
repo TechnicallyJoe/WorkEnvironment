@@ -38,3 +38,5 @@ foreach ($package in $packages.packages)
 {
     choco upgrade -y $package
 }
+
+. $PSScriptRoot\src\powershellprofile\task.ps1
