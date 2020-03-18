@@ -2,16 +2,18 @@
 param ()
 
 Write-Verbose 'Loading tasks'
-foreach ($item in (Get-ChildItem -Filter 'task.ps1' -recurse))
+foreach ($task in (Get-ChildItem -Filter 'task.ps1' -recurse))
 {
-    Write-Verbose "Found task at: $($item.FullName)"
+    Write-Verbose "Found task at: $($task.FullName)"
     try 
     {
-        . $item.FullName
+
+        Write-Host "========== STARTING NEW TASK: $($task.Directory.Name) ==========" -ForegroundColor Green
+        . $task.FullName
     }
     catch 
     {
-        Write-Error -Message "Error on task: $($item.FullName)"
+        Write-Error -Message "Error on task: $($task.FullName)"
         $Error[0]
     }
 }
