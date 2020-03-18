@@ -12,7 +12,7 @@ packages:
   - 'postman'
   - 'pwsh'
   - 'nuget.commandline'
-  - 'spotify'
+#  - 'spotify' Comes preinstalled as a windows app. Not necessarily happy about this, but it works fine.
   - 'vscode'
   - 'nodejs-lts'
   - 'steam'
