@@ -7,7 +7,7 @@ param
 
     # Packages YAML file path
     [Parameter()]
-    [string] $PackagesPath = "$srcPath/entities.yml"
+    [string] $PackagesPath = "$PSScriptRoot\entities.yml"
 )
 
 Write-Verbose 'loading dependencies'
