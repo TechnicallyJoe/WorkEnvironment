@@ -1,3 +1,6 @@
+[cmdletBinding()]
+param ()
+
 Write-Verbose 'Loading tasks'
 foreach ($item in (Get-ChildItem -Filter 'task.ps1' -recurse))
 {
