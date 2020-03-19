@@ -20,6 +20,7 @@ packages:
   - 'python'
   - 'microsoft-teams'
   - 'dotnetcore'
+  - 'dotnetcore-sdk'
   - 'uplay'
   - 'dropbox'
   - 'logitechgaming'
