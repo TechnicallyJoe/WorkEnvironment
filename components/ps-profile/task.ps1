@@ -3,7 +3,7 @@ param
 (
     # Packages YAML file path
     [Parameter()]
-    [string] $PackagesPath = "$PSScriptRoot/entities.yml",
+    [string] $PackagesPath,
 
     # path to the src folder
     [Parameter()]
@@ -22,7 +22,7 @@ param
     [string] $ProfileTemplateName = 'profile.ps1'
 )
 
-if (-not(Test-Path -Path $profile)) 
+if (-not(Test-Path -Path $profile))
 {
     if (-not(Test-Path -Path $ProfilePath)) { New-Item -Path $ProfilePath -Type Directory }
 

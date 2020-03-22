@@ -1,13 +1,13 @@
 [cmdletBinding()]
 param
 (
-    # path to the src folder
-    [Parameter()]
-    [string] $srcPath = "$PSScriptRoot\src",
-
     # Packages YAML file path
     [Parameter()]
-    [string] $PackagesPath = "$PSScriptRoot\entities.yml"
+    [string] $PackagesPath = "$PSScriptRoot/../../config.yml",
+
+    # path to the src folder
+    [Parameter()]
+    [string] $srcPath = "$PSScriptRoot/src"
 )
 
 Write-Verbose 'loading dependencies'
