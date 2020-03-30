@@ -14,11 +14,23 @@ foreach ($module in $modules)
     Import-module -Name $module
 }
 
-#Custom Aliases
+# Custom Aliases
 New-Alias -Name 'dig' -Value 'Resolve-DnsName'
+New-Alias -Name 'rdp' -Value 'Start-RemoteDesktop'
 
-#Console Config
+# Console Config
 Set-Theme Agnoster
 Set-location -Path "$($ENV:USERPROFILE)\git"
 
 Set-PSReadlineKeyHandler -Key Tab -Function Complete
+
+# Custom Functions
+function Start-RemoteDesktop
+{
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory)]
+        [string]$computername
+    )
+    mstsc /v:$computername
+}
