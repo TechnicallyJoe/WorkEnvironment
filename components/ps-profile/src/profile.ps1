@@ -1,6 +1,7 @@
 $modules = @(
     "posh-git",
     "posh-docker"
+    "oh-my-posh"
 )
 
 foreach ($module in $modules)
@@ -17,6 +18,7 @@ foreach ($module in $modules)
 New-Alias -Name 'dig' -Value 'Resolve-DnsName'
 
 #Console Config
+Set-Theme Agnoster
 Set-location -Path "$($ENV:USERPROFILE)\git"
 
 Set-PSReadlineKeyHandler -Key Tab -Function Complete
