@@ -7,7 +7,6 @@ packages:
   - 'discord'
   - 'docker-desktop'
   - 'docker-compose'
-  - 'discord'
   - 'git'
   - 'postman'
   - 'pwsh'
